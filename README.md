@@ -7,10 +7,10 @@ As the demo below, the accuracy (mAP) of retrieval results is improved after eac
 ![demo](plot_git/demo.jpg)
 
 ## Requirements
-1. Image Dataset
+**1. Image Dataset**
 - I use Corel dataset that is very popular in CBIR to demo. The data folder is compressed at [Corel.zip](https://github.com/HoangPham3003/SVM-Active-Learning-for-Relevance-Feedback/blob/main/db/Corel.zip) in my repository.
 - Paths of images are saved as PKL file at [paths.pkl](https://github.com/HoangPham3003/SVM-Active-Learning-for-Relevance-Feedback/blob/main/db/features/paths.pkl).
-2. Features Database
+**2. Features Database**
 - All Corel images are extracted to 4096d-vectors features using CNN. I use VGG19 as a feature extractor. The features database is compressed at [features.zip](https://github.com/HoangPham3003/SVM-Active-Learning-for-Relevance-Feedback/blob/main/db/features/features.zip) in my repository.
 
 ## Main objectives
@@ -23,11 +23,11 @@ Argparse:
 - rf: use relevance feedback or not
 - rf_loop: number of iterations of relevance feedback
 - k_future: number of samples being labeled in future by active learning
-1. Image Retrieval Without Relevance Feedback
+**1. Image Retrieval Without Relevance Feedback**
 ``` shell
 python rf.py --query_image_path db/Corel/wl_tiger/108009.jpg
 ```
-2. Image Retrieval With Relevance Feedback
+**2. Image Retrieval With Relevance Feedback**
 ``` shell
 python rf.py --query_image_path db/Corel/wl_tiger/108009.jpg --rf True --rf_loop 3 --k_future 500
 ```
